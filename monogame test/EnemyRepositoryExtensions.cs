@@ -23,10 +23,10 @@ namespace monogame_test
 
             var references = new MetadataReference[]
             {
-                MetadataReference.CreateFromFile(
-                    typeof(object).Assembly.Location),         // mscorlib
-                MetadataReference.CreateFromFile(
-                    typeof(Console).Assembly.Location),        // System.Console
+                /*MetadataReference.CreateFromFile(
+                    typeof(object).Assembly.Location),         // mscorlib*/
+                /*MetadataReference.CreateFromFile(
+                    typeof(Console).Assembly.Location),        // System.Console*/
                 MetadataReference.CreateFromFile(
                     typeof(System.Runtime.AssemblyTargetedPatchBandAttribute).Assembly.Location), // System.Runtime
                 MetadataReference.CreateFromFile(

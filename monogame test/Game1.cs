@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Modding;
+using System;
 
 namespace monogame_test
 {
@@ -35,11 +36,18 @@ namespace monogame_test
 
         protected override void Initialize()
         {
-            enemyRepo = new EnemyRepository();
-            enemyRepo.Init();
+            Console.WriteLine("init");
+            try
+            {
+                enemyRepo = new EnemyRepository();
+                enemyRepo.Init();
 
-            upgradeRepo = new UpgradeRepository();
-            upgradeRepo.Init();
+                upgradeRepo = new UpgradeRepository();
+                upgradeRepo.Init();
+            }catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
 
             base.Initialize();
         }
